@@ -1,0 +1,105 @@
+.dark {
+    background-color: #333;
+    color: #fff;
+}
+  
+.dark a {
+    color: white;
+}
+  
+.dark .top-navigation {
+  border-bottom: .8px solid white;
+  }
+  
+.dark .headline-box {
+    border: 1px solid white;
+}
+  
+.dark .button-icon {
+    color: white;
+}
+  
+.dark .option {
+    border: 1px solid white;
+    color: white;
+}
+  
+@media (hover: hover) {
+    .dark .option:hover {
+        transition: 0.3s;
+        background-color: white;
+        color: black;
+    }
+  }
+  
+.dark .modal-content {
+    background-color: #333;
+    color: white;
+}
+  
+.dark .modal-content li {
+    color: white;
+}
+  
+.dark .modal-content button {
+    border: 1px solid white;
+    color: white;
+}
+
+.dark #full-results {
+    border: 1px solid white;
+}
+
+.dark .sharer-button {
+    border: 1px solid white;
+    color: white;
+}
+
+.dark .sharer-button:hover {
+    background-color: white;
+    color: black;
+}
+  
+.light {
+    background-color: #fff;
+    color: black;
+}
+  
+.light a {
+    color: black;
+}
+
+.light .modal-content {
+    background-color: white;
+    color: black;
+}
+  
+.light .modal-content button {
+    border: 1px solid black;
+    color: black;
+}
+
+.light .sharer-button {
+    border: 1px solid black;
+    color: black;
+}
+
+
+@media (hover: hover) {
+    .light .sharer-button:hover {
+        background-color: black;
+        color: white;
+    }
+  }
+
+.light .option {
+    color: black;
+}
+
+@media (hover: hover) {
+    .light .option:hover {
+        transition: 0.3s;
+        background-color: black;
+        color: white;
+    }
+  }

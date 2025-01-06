@@ -1,38 +1,220 @@
 .App {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.top-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: .8px solid black;
+}
+
+.site-name {
+  text-decoration: none;
+  font-size: 26px;
+  margin: 0 10px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  margin: 0px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.button-icon {
+  height: 33px;
+  width: 33px;
+  margin: 0px 5px;  
+  color: black;
+}
+
+.headline {
+  font-size: 36px;
+  margin: 15px;
+  font-weight: bold;
+  text-align: center;}
+
+.option {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 8px 12px;
+  transition: 0.3s;
+  font-size: 24px;
+  width: 40vw;
+}
+
+@media (hover: hover) {
+  .option:hover {
+      transition: 0.3s;
+      background-color: black;
+      color: white;
+  }
+}
+
+
+@media screen and (max-width: 590px) {
+  .option {
+    width: 80vw;
+  }
+}
+
+.restart {
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  margin: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  color: rgb(51, 176, 244);
+}
+
+/* make headline-box a flex container that is responsive */
+.headline-box {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 25px;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+#results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#full-results {
+  margin: 25px;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid black;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.result-box {
+  flex: 1 0 25%;
+  margin: 25px;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid black;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.correct {
+  border: 2px solid green;
+}
+
+.incorrect {
+  border: 2px solid red;
+}
+
+.sharer-button {
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 8px 12px;
+  transition: 0.3s;
+}
+
+@media (hover: hover) {
+  .sharer-button:hover {
+      transition: 0.3s;
+      background-color: black;
+      color: white;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 590px) {
+  #results {
+    flex-direction: column;
+  };
+}
+
+#portal .modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-.App-link {
-  color: #61dafb;
+.modal-container .modal-content {
+  z-index: 1;
+  max-width: 600px;
+  padding: 12px;
+  border-radius: 5px;
+  position: relative;
+  animation: animate 0.3s;
+  margin: 0 14px;
 }
 
-@keyframes App-logo-spin {
+.modal-content h2 {
+  text-align: center;
+}
+
+.modal-content li {
+  margin: 10px 0;
+}
+
+.modal-content button:first-of-type {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  padding: 8px 11px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@keyframes animate {
   from {
-    transform: rotate(0deg);
+    transform: scale(0.5);
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(1);
   }
+}
+
+.change-theme {
+  background-color: transparent;
+  border: none;
+  margin: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
 }
